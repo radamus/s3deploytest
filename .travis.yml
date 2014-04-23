@@ -2,3 +2,12 @@ language: node_js
 node_js:
 - '0.11'
 - '0.10'
+deploy:
+  provider: s3
+  access_key_id: AKIAJRJFYD64JIVPLKWQ
+  secret_access_key:
+    secure: m9nGRXCyGXLBOpeRXoW76Q6w/zbYGn6FQ9tq1CJY/X1YS3hwxixEdzxDo40PwbDnMs/QJyDk2JYt0f9HxATCLIMvBW99OzFqOZP0+JnBrVT1TTNzw9Fe4mUk5OqGv7hheeX0+xYxDovsjzyCRmUazW6jpnTXejXEWMk/NWs4q7w=
+  bucket: deploy-weeia
+  upload-dir: radek
+  on:
+    repo: radamus/s3deploytest
